@@ -1,9 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
-
+import java.awt.event.*;
+import java.util.*;
 import static java.awt.Font.*;
 
 public class PlayFair implements ActionListener {
@@ -16,6 +14,7 @@ public class PlayFair implements ActionListener {
     // ENCRYPTED BY PAIR
     public static ArrayList<String> encryptedText = new ArrayList<String>();
 
+    // REMOVE DUPLICATES ON THE KEYWORD
     public static String removeDups(String keyword){
         keyword=keyword.toLowerCase();
         String keywordfixed="", output="";
@@ -42,6 +41,7 @@ public class PlayFair implements ActionListener {
         return output;
     }
 
+    // CREATING A TABLE FOR ENCRYPTION
     public static void tableCypher(String keyword){
         int column=0, row=0;
 
@@ -99,6 +99,8 @@ public class PlayFair implements ActionListener {
          */
 
     }
+
+    // ENCRYPTION PART
     public static String encryption(String textEntered) {
         groupedText.clear();
         encryptedText.clear();
@@ -218,6 +220,7 @@ public class PlayFair implements ActionListener {
 
     }
 
+    // DECRYPTION PART
     public static String decryption(String cipherText){
 
         String text = cipherText.toLowerCase().replaceAll("\\s", "");
@@ -284,9 +287,7 @@ public class PlayFair implements ActionListener {
 
     }
 
-
-
-
+    // EVENTS OF THE FRAMES
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
 
@@ -322,7 +323,6 @@ public class PlayFair implements ActionListener {
 
     }
 
-
     static class ButtonCustom extends JButton {
         private Color hoverBackgroundColor;
         private Color pressedBackgroundColor;
@@ -352,24 +352,19 @@ public class PlayFair implements ActionListener {
         @Override
         public void setContentAreaFilled(boolean b) {
         }
-
         public Color getHoverBackgroundColor() {
             return hoverBackgroundColor;
         }
-
         public void setHoverBackgroundColor(Color hoverBackgroundColor) {
             this.hoverBackgroundColor = hoverBackgroundColor;
         }
-
         public Color getPressedBackgroundColor() {
             return pressedBackgroundColor;
         }
-
         public void setPressedBackgroundColor(Color pressedBackgroundColor) {
             this.pressedBackgroundColor = pressedBackgroundColor;
         }
     }
-
 
 // DECLARATIONS
     JFrame frame; // FOR MAIN FRAME
@@ -400,8 +395,6 @@ public class PlayFair implements ActionListener {
         encipher.setPressedBackgroundColor(new Color(56, 18, 57));
         encipher.addActionListener(this);
 
-
-
         // ENCIPHER TEXT LABEL
         JLabel enbel = new JLabel();
         enbel.setText(" PLAIN TEXT:");
@@ -416,7 +409,6 @@ public class PlayFair implements ActionListener {
         detxt.setBounds(380, 225, 250, 150);
         detxt.setBackground(new Color(251,209,150));
         detxt.setBorder(BorderFactory.createEmptyBorder(4,6,4,6));
-
 
         //BUTTONS ---> DECIPHER
         decipher = new ButtonCustom("DECIPHER");
@@ -439,7 +431,7 @@ public class PlayFair implements ActionListener {
         debel.setOpaque(true); //setting JLabel background visible
 
         // SETTING UP LABEL ON THE TOP OF THE FRAME
-        label = new JLabel("PLAYFAIR CIPHER/DECIPHER");
+        label = new JLabel("PLAYFAIR CIPHER");
         label.setFont(new Font("Monospaced", BOLD, 30));
         label.setSize(700, 100);
         label.setForeground(new Color(255,255,255));
@@ -505,15 +497,11 @@ public class PlayFair implements ActionListener {
         btnp2.setOpaque(false);
         btnp2.add(rb2);
 
-
-
         //MAIN FRAME
         frame = new JFrame();
         JLabel bg = new JLabel();
         bg.setIcon(new ImageIcon(img.getImage().getScaledInstance(914, 918, Image.SCALE_SMOOTH)));
         bg.setBounds(0,0,700,500);
-
-
 
         frame.setUndecorated(true);
         frame.setSize(700, 500);
@@ -534,15 +522,11 @@ public class PlayFair implements ActionListener {
         frame.setLayout(null);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
-
-
-
-
     }
+
+    // MAIN METHOD
     public static void main(String[] args) {
-
-    new PlayFair();
-
+         new PlayFair();
     }
 
 
