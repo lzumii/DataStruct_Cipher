@@ -93,7 +93,7 @@ public class caesar implements ActionListener {
     }
     // UI DECLARATIONS
     JFrame frame;
-    JLabel lbCaesar, shift, ELabel;
+    JLabel lbCaesar, shift, ELabel, DLabel;
     JPanel Cpanel, shiftpanel, Ipanel, Opanel;
     JTextArea Etext, Detext, s;
     ActionButton E, D;
@@ -169,7 +169,7 @@ public class caesar implements ActionListener {
         Detext.setBackground(new Color(251, 209, 150));
         Detext.setBorder(BorderFactory.createEmptyBorder(4, 6, 4 ,6));
 
-        JLabel DLabel = new JLabel(" Deciphered text here.", SwingConstants.LEFT);
+        DLabel = new JLabel(" Deciphered text here.", SwingConstants.LEFT);
         DLabel.setFont(new Font("Monospaced", Font.BOLD, 14));
         DLabel.setBounds(0, 0, 200, 50);
         DLabel.setForeground(new Color(194, 203, 208));
