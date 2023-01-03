@@ -364,6 +364,7 @@ public class PlayFair implements ActionListener {
         entxt.setBounds(50, 225, 250, 150);
         entxt.setBackground(new Color(251,209,150));
         entxt.setBorder(BorderFactory.createEmptyBorder(4,6,4,6));
+        entxt.setLineWrap(true);
 
         //BUTTONS ---> ENCIPHER
         encipher = new main.ButtonCustom("ENCIPHER");
@@ -390,6 +391,7 @@ public class PlayFair implements ActionListener {
         detxt.setBounds(380, 225, 250, 150);
         detxt.setBackground(new Color(251,209,150));
         detxt.setBorder(BorderFactory.createEmptyBorder(4,6,4,6));
+        detxt.setLineWrap(true);
 
         //BUTTONS ---> DECIPHER
         decipher = new main.ButtonCustom("DECIPHER");

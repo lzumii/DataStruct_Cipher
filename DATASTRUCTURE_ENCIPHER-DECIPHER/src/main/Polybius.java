@@ -162,6 +162,7 @@ public class Polybius implements ActionListener {
         Encipher.setBounds(50, 210, 250, 150);
         Encipher.setBackground(new Color(251,209,150));
         Encipher.setBorder(BorderFactory.createEmptyBorder(4,6,4,6));
+        Encipher.setLineWrap(true);
 
         EnLabel = new JLabel(" PLAIN TEXT:", SwingConstants.LEFT);
         EnLabel.setForeground(new Color(255,255,255));
@@ -191,6 +192,7 @@ public class Polybius implements ActionListener {
         Decipher.setBounds(380, 210, 250, 150);
         Decipher.setBackground(new Color(251,209,150));
         Decipher.setBorder(BorderFactory.createEmptyBorder(4,6,4,6));
+        Decipher.setLineWrap(true);
 
         DeLabel = new JLabel(" CIPHER TEXT:", SwingConstants.LEFT);
         DeLabel.setForeground(new Color(255,255,255));

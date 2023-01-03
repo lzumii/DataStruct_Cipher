@@ -182,6 +182,7 @@ public class Caesar implements ActionListener {
         Etext.setBounds(50, 230, 250, 150);
         Etext.setBackground(new Color(251, 209, 150));
         Etext.setBorder(BorderFactory.createEmptyBorder(4, 6, 4 ,6));
+        Etext.setLineWrap(true);
 
         ELabel = new JLabel(" PLAIN TEXT:", SwingConstants.LEFT);
         ELabel.setFont(new Font("Monospaced", Font.BOLD, 14));
@@ -209,6 +210,7 @@ public class Caesar implements ActionListener {
         Detext.setBounds(380, 230, 250, 150);
         Detext.setBackground(new Color(251, 209, 150));
         Detext.setBorder(BorderFactory.createEmptyBorder(4, 6, 4 ,6));
+        Detext.setLineWrap(true);
 
         DLabel = new JLabel(" CIPHER TEXT:", SwingConstants.LEFT);
         DLabel.setFont(new Font("Monospaced", Font.BOLD, 14));
